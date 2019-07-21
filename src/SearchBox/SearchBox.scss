@@ -1,0 +1,48 @@
+.search-form {
+  top: 8px;
+  position: relative;
+
+  .radio-btn-spn {
+    border: 1px solid #b6b2b2;
+    padding: 4px;
+    
+    .name-radio {
+      margin-left: 5px;
+      margin-right: 0px;
+    }
+    .desc-radio {
+      margin-left: 17px;
+      margin-right: 0px;
+    }
+  }
+
+  .search-submit-btn {
+    height: 32px;
+    margin-left: 6px;
+    top: -2px;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+  }
+
+  #search-result-container {
+    border: 1px solid #e8e6ef;
+    width: 200px;
+    left: 14px;
+    position: relative;
+    height: auto;
+    max-height: 200px;
+    overflow-y: auto;
+    top: -4px;
+
+    .auto-complete-item {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      border: 1px solid #fff;
+      &:hover {
+        background-color: aqua;
+      } 
+    }
+  }
+}

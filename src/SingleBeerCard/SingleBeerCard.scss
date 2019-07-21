@@ -1,0 +1,12 @@
+.single-beer-card {
+    margin-top: 45px;
+    position: relative;
+    background: 1px solid rgb(121, 9, 9);
+    .card-body {
+        background-color: antiquewhite;
+        img {
+            width: 140px;
+            height: 204px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.random-beer-body {
+    .beer-name {
+      left: 18px;
+      position: relative;
+      width: 100%;
+    }
+
+    .beer-summary {
+      .beer-img {
+        height: 150px;
+        width: 133px;
+
+        img {
+          height: 100%;
+          width: 100%;
+          position: relative;
+        }
+      }
+      .beer-buttons {
+        .beer-buttons-grp {
+          width: 144px;
+
+          .another-beer {
+            width: 100%;
+            font-size: small;
+            font-weight: 100%;
+            margin-bottom: 10px;
+          }
+
+          .non-alcoholic {
+            width: 100%;
+            font-size: small;
+            font-weight: 100%;
+          }
+        }
+      }
+    }
+}
