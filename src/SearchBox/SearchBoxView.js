@@ -5,7 +5,8 @@ import './SearchBox.scss'
 const SearchBoxView = props => {
   const displaySearchBox = () =>(
     <section className="jumbotron-fluid search-box-section">
-      <nav class="navbar navbar-light bg-light"> Search your drink
+      <nav class="navbar navbar-light bg-light"> 
+        <span className="search-header-text">Search your drink</span>
         <form onSubmit={props.searchFormSubmit} autoComplete="off" className="search-form">
           <span className="search-text-spn col-md-2">
             <input
