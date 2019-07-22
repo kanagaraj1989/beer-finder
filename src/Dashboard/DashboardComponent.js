@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
-import { RANDOM_PUNK_API } from '../APIConfig/PunkAPI.js'
+import { RANDOM_PUNK_API 
+  , NON_ALCOHOLIC_BEER_PUNK_API
+  , ALL_BEERS_PUNK_API} from '../APIConfig/PunkAPI.js'
 import  RandomBeerComponent from  '../RandomBeer/RandomBeerComponent'
 import SearchBoxComponent from '../SearchBox/SearchBoxComponent'
 import PunkAPIService from '../APIService/PunkAPIService'
@@ -10,15 +11,15 @@ class DashboardComponent extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      randomBeerUrl: 'https://api.punkapi.com/v2/beers/random',
-      nonAlcoholicUrl: 'https://api.punkapi.com/v2/beers/random?abv_lt=5.0',
+      randomBeerUrl: RANDOM_PUNK_API,
+      nonAlcoholicUrl: NON_ALCOHOLIC_BEER_PUNK_API,
       beers: [],
     }
   }
 
   componentDidMount()
   {
-    PunkAPIService.GetAllBeer('https://api.punkapi.com/v2/beers')
+    PunkAPIService.GetAllBeer(ALL_BEERS_PUNK_API)
     .then(beers => {
        this.setState({beers})
     })

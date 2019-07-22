@@ -22,4 +22,15 @@ const SingleBeerCardView = (props) => {
     )
 }
 
+SingleBeerCardView.propTypes = {
+    beer: PropTypes.shape({
+      name: PropTypes.string,
+      image: PropTypes.string,
+      description: PropTypes.string
+    })
+  }
+  
+  SingleBeerCardView.defaultProps = {
+    beer: {}
+  }
 export default SingleBeerCardView

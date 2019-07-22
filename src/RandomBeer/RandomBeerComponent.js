@@ -40,8 +40,8 @@ class RandomBeerComponent extends Component {
 
       return(
         <div>
-          <nav class="navbar beer-finder">
-            <ul class="navbar-nav">
+          <nav className="navbar beer-finder">
+            <ul className="navbar-nav">
               <li>
                 Beer Finder
               </li>
@@ -51,6 +51,11 @@ class RandomBeerComponent extends Component {
         </div>
       )
     }
+}
+
+RandomBeerComponent.propTypes = {
+  randomBeerUrl: PropTypes.string,
+  nonAlcoholicUrl: PropTypes.string,
 }
 
 export default RandomBeerComponent

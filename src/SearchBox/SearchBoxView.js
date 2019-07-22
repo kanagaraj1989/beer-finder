@@ -5,7 +5,7 @@ import './SearchBox.scss'
 const SearchBoxView = props => {
   const displaySearchBox = () =>(
     <section className="jumbotron-fluid search-box-section">
-      <nav class="navbar navbar-light bg-light"> 
+      <nav className="navbar navbar-light bg-light"> 
         <span className="search-header-text">Search your drink</span>
         <form onSubmit={props.searchFormSubmit} autoComplete="off" className="search-form">
           <span className="search-text-spn col-md-2">
@@ -25,7 +25,7 @@ const SearchBoxView = props => {
               className="name-radio"
               value="sname"
               ref = {props.nameTypeRefHandler} 
-              checked
+              defaultChecked
             /> by name 
 
           <input 
@@ -50,4 +50,11 @@ const SearchBoxView = props => {
   )
 }
 
+SearchBoxView.propTypes = {
+  searchFormSubmit: PropTypes.func.isRequired,
+  searchTextboxRefHandler: PropTypes.func.isRequired,
+  nameTypeRefHandler: PropTypes.func.isRequired,
+  searchResultRefHandler: PropTypes.func.isRequired,
+  descriptionTypeRefHandler: PropTypes.func.isRequired
+}
 export default SearchBoxView

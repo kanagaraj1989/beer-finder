@@ -76,10 +76,6 @@ class SearchBoxComponent extends Component {
         this.setState({searchResult:beers, updateSearchForm: false, updateBeerListCard: true})
     }
 
-    updateSearchFormResult(beerName) {
-        const beers = PunkAPIService.getBeerByName(this.state.beers, beerName)
-    }
-
     updateSearchResult = beers => {
         this.clearSearchResult()
 
@@ -113,11 +109,26 @@ class SearchBoxComponent extends Component {
         })
         return(
             <div>
-                {this.updateSearchResult && <SearchBoxView {...props}/>}
-                {this.updateSearchFormResult && <BeerCardListView {...beerCardProps}/>}
+                <SearchBoxView {...props}/>
+                <BeerCardListView {...beerCardProps}/>
             </div>
         )
     }
+}
+
+SearchBoxComponent.propTypes = {
+    beers: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string,
+            image: PropTypes.string,
+            description: PropTypes.string,
+            id: PropTypes.number
+        })
+    )
+}
+
+SearchBoxComponent.defaultProps = {
+    beers: []
 }
 
 export default SearchBoxComponent

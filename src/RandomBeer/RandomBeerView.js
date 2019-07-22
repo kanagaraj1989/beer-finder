@@ -19,11 +19,11 @@ const RandomBeerView = props => {
         {isError(error) && displayErrorMessage(error)}
         <span className="beer-buttons col-md-3">
           <div className="beer-buttons-grp">
-            <button type="button" class="btn btn-primary another-beer row"
+            <button type="button" className="btn btn-primary another-beer row"
                 onClick={(event) => props.anotherRandomBeer()}>
                 Another Beer
             </button>
-            <button type="button" class="btn btn-primary non-alcoholic row"
+            <button type="button" className="btn btn-primary non-alcoholic row"
                 onClick={(event) => props.anotherNonAlcoholicBeer()}>
                 Random non alcoholic beer
             </button>
@@ -41,5 +41,20 @@ const RandomBeerView = props => {
     return(
         <div>{displayRandomBeer(props.randomBeer, props.error)}</div>
     )
+}
+
+RandomBeerView.propTypes = {
+  randomBeer: PropTypes.shape({
+    name: PropTypes.string,
+    image: PropTypes.string,
+    description: PropTypes.string
+  }),
+  error: PropTypes.string,
+  anotherRandomBeer: PropTypes.func.isRequired,
+  anotherNonAlcoholicBeer: PropTypes.func.isRequired
+}
+
+RandomBeerView.defaultProps = {
+  randomBeer: {}
 }
 export default RandomBeerView
