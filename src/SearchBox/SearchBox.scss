@@ -1,10 +1,11 @@
 .search-form {
-  top: 8px;
+  top: 4px;
   position: relative;
 
   .radio-btn-spn {
     border: 1px solid #b6b2b2;
     padding: 4px;
+    background-color: #fff;
     
     .name-radio {
       margin-left: 5px;
@@ -43,6 +44,22 @@
       &:hover {
         background-color: aqua;
       } 
+    }
+  }
+}
+
+.search-box-section {
+  top: 5px;
+  position: relative;
+
+
+  nav {
+    max-height: 56px;
+    &.bg-light {
+      background-color: #e5e7e9 !important;
+      .search-header-text {
+        font-size: 19px;
+      }
     }
   }
 }

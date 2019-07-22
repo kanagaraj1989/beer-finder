@@ -40,6 +40,13 @@ class RandomBeerComponent extends Component {
 
       return(
         <div>
+          <nav class="navbar beer-finder">
+            <ul class="navbar-nav">
+              <li>
+                Beer Finder
+              </li>
+            </ul>
+          </nav>
           <RandomBeerView {...props}/>
         </div>
       )
