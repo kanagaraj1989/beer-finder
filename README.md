@@ -1,5 +1,5 @@
 How To Run:
-1. https://github.com/kanagaraj1989/beer-finder.git
+1. git clone https://github.com/kanagaraj1989/beer-finder.git
 2. cd beer-finder
 3. npm install
 4. npm start
