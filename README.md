@@ -7,7 +7,7 @@ How To Run:
 Note:
 1. All beers are cached when component mount and used for user search "Search by name & Search by description" on dashboard.
 2. We don't have API to search by "description", so i have used cached object for this operation.
-3. Non Alcoholic beers api always return a same beer.
+3. PUNK API always return the same beer for Non Alcoholic beer request.
 
 
 ToDo:
